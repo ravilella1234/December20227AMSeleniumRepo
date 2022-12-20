@@ -56,6 +56,7 @@ public class BaseTest
 	public static void navigateUrl(String url)
 	{
 		driver.get(childProp.getProperty(url));
+		driver.navigate().to(childProp.getProperty(url));
 	}
 
 }
