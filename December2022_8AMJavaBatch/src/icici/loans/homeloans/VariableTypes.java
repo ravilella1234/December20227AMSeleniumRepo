@@ -30,6 +30,8 @@ public class VariableTypes
 		//VariableTypes obj = new VariableTypes(); // non-primitive (or) reference
 		System.out.println(obj.x);
 		System.out.println(VariableTypes.cname);	
+		obj.m1();
+		m2();
 	}
 
 }
