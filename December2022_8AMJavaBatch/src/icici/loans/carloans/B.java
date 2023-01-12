@@ -1,7 +1,12 @@
 package icici.loans.carloans;
 
-public class B extends A
+public class B extends A // ISa relationship
 {
+	public void m1() 
+	{
+		System.out.println("iam m1 from A");
+	}
+	
 	public void m2() 
 	{
 		System.out.println("iam m2 from B");
@@ -9,14 +14,12 @@ public class B extends A
 	
 	public static void main(String[] args) 
 	{
-		A a = new A();
+		A a = new A(); // HasA Relationship
 		a.m1();
-		System.out.println(a.x);
 		
 		B b = new B();
 		b.m2();
 		b.m1();
-		System.out.println(b.x);
 	}
 
 }

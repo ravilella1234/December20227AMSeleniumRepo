@@ -1,20 +1,23 @@
 package icici.loans.homeloans;
 
-public class VariableTypes 
+public  class VariableTypes 
 {
 	// primitive
 	int x = 100; // instance (or) global (or) non-static
-	static String cname = "vmware"; // static (or) static-global
+	int y=10;
+	public final static String cname = "vmware"; // static (or) static-global
 	static VariableTypes obj = new VariableTypes();
 	
 	public void m1()
 	{
+		y=100;
 		int x = 200; // local
 		//System.out.println(y);
 		System.out.println(x);
 		System.out.println(this.x);
 		System.out.println(VariableTypes.cname);
 	}
+	
 	
 	public static void m2()
 	{
