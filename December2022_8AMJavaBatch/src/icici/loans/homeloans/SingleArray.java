@@ -5,15 +5,8 @@ import java.util.Scanner;
 public class SingleArray 
 {
 
-	public static void main(String[] args) 
+	public int m1()
 	{
-		/*int[] a = {10,20,30,40};
-		
-		for(int i=0;i<a.length;i++)
-		{
-			System.out.println("a["+i+"]="+a[i]);
-		}*/
-		
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter the array Size : ");
 		int asize = sc.nextInt();
@@ -29,6 +22,14 @@ public class SingleArray
 			sum = sum + a[i];
 		}
 		System.out.println("Sum of array is : "+ sum);
+		return sum;
+	}
+	
+	public static void main(String[] args) 
+	{		
+		SingleArray obj = new SingleArray();
+		int count = obj.m1();
+		System.out.println("Count of Array is : " +  count);
 	}
 
 }
