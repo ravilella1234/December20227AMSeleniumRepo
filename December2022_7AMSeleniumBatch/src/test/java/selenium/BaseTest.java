@@ -25,6 +25,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest 
 {
+	
+	// Critical failures(HardAsserts) ,non-Criticals failures (soft Asserts), non-functional failures
+	
 	public static WebDriver driver;
 	public static String projectPath = System.getProperty("user.dir");
 	public static FileInputStream fis;
