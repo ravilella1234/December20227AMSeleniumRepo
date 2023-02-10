@@ -1,13 +1,15 @@
 package excelDataDriven;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelDataReaderByName 
+public class ExcelDataWriterByNumber 
 {
 
 	public static void main(String[] args) throws Exception 
@@ -15,25 +17,14 @@ public class ExcelDataReaderByName
 		FileInputStream fis = new FileInputStream("C:\\Users\\ravi\\Desktop\\testdata1.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sheet = wb.getSheet("login");
-		XSSFRow row = sheet.getRow(0);
-		XSSFCell cell = null;
+		XSSFRow row = sheet.getRow(1);
+		XSSFCell cell = row.getCell(4);
+		cell.setCellValue("Passed");
 		
-		int cellIndex = -1;
-		for(int i=0;i<row.getLastCellNum();i++)
-		{
-			if(row.getCell(i).getStringCellValue().trim().equals("Password"))
-				cellIndex = i;
-		}
-		
-		row = sheet.getRow(2);
-		cell = row.getCell(cellIndex);
-		
-		String str = cell.getStringCellValue();
-		System.out.println(str);
-		
+		FileOutputStream fos = new FileOutputStream("C:\\Users\\ravi\\Desktop\\testdata1.xlsx");
+		wb.write(fos);
 		wb.close();
-		fis.close();
-		
+		fos.close();
 	}
 
 }
