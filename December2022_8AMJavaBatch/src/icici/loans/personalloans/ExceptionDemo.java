@@ -12,6 +12,7 @@ public class ExceptionDemo
 		
 		Scanner sc = new Scanner(System.in);
 		
+		
 		while(true) 
 		{
 			System.out.println("Enter the nr value : ");
@@ -28,6 +29,10 @@ public class ExceptionDemo
 			catch (Exception e) 
 			{
 				e.printStackTrace();
+			}
+			finally 
+			{
+				System.out.println("iam final block...");
 			}
 			
 			
