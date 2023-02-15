@@ -76,12 +76,12 @@ public class BaseTest
 	
 	public static void launch(String browser)
 	{
-		if(browser.equals("chrome"))
+		if(p.getProperty(browser).equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
-		else if(browser.equals("firefox"))
+		else if(p.getProperty(browser).equals("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -91,7 +91,7 @@ public class BaseTest
 	public static void navigateUrl(String url)
 	{
 		driver.get(childProp.getProperty(url));
-		driver.navigate().to(childProp.getProperty(url));
+		//driver.navigate().to(childProp.getProperty(url));
 	}
 	
 	public static void clickElement(String locatorKey) 
