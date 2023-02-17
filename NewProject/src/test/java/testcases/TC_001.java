@@ -2,8 +2,11 @@ package testcases;
 
 import org.testng.annotations.Test;
 
-public class TC_001 {
+public class TC_001 extends BaseTest
+{
   @Test
-  public void f() {
+  public void f() 
+  {
+	  System.out.println("f test");
   }
 }
