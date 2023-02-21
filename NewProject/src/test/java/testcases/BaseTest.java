@@ -1,20 +1,27 @@
 package testcases;
 
-import org.testng.annotations.AfterTest;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+
+import keywords.ApplicationKeywords;
 
 public class BaseTest 
 {
+	public ApplicationKeywords app;
+	
 	@BeforeTest
-	public void startProcess()
+	public void beforeTest(ITestContext context)
 	{
-		System.out.println("startProcess BeforeTest");
+		app = new ApplicationKeywords();
+		System.out.println("startProcess BeforeTest");		
+		context.setAttribute("app", app);
 	}
 	
-	@AfterTest
-	public void endProcess()
+	@BeforeMethod
+	public void beforeMethod(ITestContext context)
 	{
-		System.out.println("endProcess AfterTest");
+		System.out.println("startProcess beforeMethod");	
+		app = (ApplicationKeywords)context.getAttribute("app");
 	}
-
 }
