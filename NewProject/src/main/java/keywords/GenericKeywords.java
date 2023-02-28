@@ -11,6 +11,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GenericKeywords 
@@ -20,10 +23,13 @@ public class GenericKeywords
 	public FileInputStream fis;
 	public Properties mainProp;
 	public Properties childProp;
+	public ExtentTest test;
 	
 	public void openBrowser(String browserName)
 	{
 		System.out.println("Opening the Browser : " + childProp.getProperty(browserName));
+		//test.log(Status.INFO, "Opening the Browser : " + childProp.getProperty(browserName));
+		log("Opening the Browser : " + childProp.getProperty(browserName));
 		if(childProp.getProperty(browserName).equalsIgnoreCase("chrome")){
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -36,16 +42,22 @@ public class GenericKeywords
 	public void naviagateurl(String url)
 	{
 		System.out.println("Navigating to url :" + childProp.getProperty(url));
+		//test.log(Status.INFO, "Navigating to url :" + childProp.getProperty(url));
+		log("Navigating to url :" + childProp.getProperty(url));
 		driver.get(childProp.getProperty(url));
 	}
 	
 	public void type(String locatorKey,String text)
 	{
+		//test.log(Status.INFO, "typing the test by using locator :" + childProp.getProperty(text));
+		log("typing the test by using locator :" + childProp.getProperty(text));
 		getElement(locatorKey).sendKeys(childProp.getProperty(text));
 	}
 	
 	public void clickElement(String locatorKey)
 	{
+		//test.log(Status.INFO, "Clicking on element By using locator : " + locatorKey);
+		log("Clicking on element By using locator : " + locatorKey);
 		getElement(locatorKey).click();
 	}
 	
@@ -71,6 +83,7 @@ public class GenericKeywords
 	public boolean isElementPresent(String locatorKey) 
 	{
 		System.out.println("Cheking for Element presence : " + locatorKey);
+		test.log(Status.INFO, "Cheking for Element presence : " + locatorKey);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.presenceOfElementLocated(getLocator(locatorKey)));
@@ -97,6 +110,17 @@ public class GenericKeywords
 			by = By.partialLinkText(mainProp.getProperty(locatorKey));
 		}
 		return by;
+	}
+	
+	public void setReport(ExtentTest test)
+	{
+		this.test = test;
+	}
+	
+	//Reporting Function
+	public void log(String msg)
+	{
+		test.log(Status.INFO, msg);
 	}
 
 }
