@@ -1,56 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="7" passed="2">
+<testng-results skipped="0" failed="2" ignored="5" total="7" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="22085" started-at="2023-02-28T02:20:19Z" finished-at="2023-02-28T02:20:41Z">
+  <suite name="Suite" duration-ms="24869" started-at="2023-03-01T02:12:26Z" finished-at="2023-03-01T02:12:51Z">
     <groups>
     </groups>
-    <test name="Create Portifolio Test" duration-ms="22085" started-at="2023-02-28T02:20:19Z" finished-at="2023-02-28T02:20:41Z">
+    <test name="Create Portifolio Test" duration-ms="24869" started-at="2023-03-01T02:12:26Z" finished-at="2023-03-01T02:12:51Z">
       <class name="testcases.PortifolioManagement">
-        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@39c0f4a]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-02-28T02:20:39Z" finished-at="2023-02-28T02:20:39Z">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@42e26948]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2023-03-01T02:12:50Z" finished-at="2023-03-01T02:12:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1c98290c]]>
+                <![CDATA[org.testng.TestRunner@5f2606b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="createportifolio()[pri:0, instance:testcases.PortifolioManagement@39c0f4a]" name="createportifolio" duration-ms="3" started-at="2023-02-28T02:20:39Z" finished-at="2023-02-28T02:20:39Z">
+        <test-method status="FAIL" signature="createportifolio()[pri:0, instance:testcases.PortifolioManagement@42e26948]" name="createportifolio" duration-ms="4" started-at="2023-03-01T02:12:50Z" finished-at="2023-03-01T02:12:50Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Test is Incorrect,
+some non critical failure....]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Test is Incorrect,
+some non critical failure....
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at keywords.GenericKeywords.assertAll(GenericKeywords.java:142)
+at testcases.PortifolioManagement.createportifolio(PortifolioManagement.java:13)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createportifolio -->
       </class> <!-- testcases.PortifolioManagement -->
       <class name="testcases.Session">
-        <test-method status="PASS" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.Session@7d9d1a19]" name="beforeTest" is-config="true" duration-ms="507" started-at="2023-02-28T02:20:19Z" finished-at="2023-02-28T02:20:19Z">
+        <test-method status="PASS" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.Session@1794d431]" name="beforeTest" is-config="true" duration-ms="488" started-at="2023-03-01T02:12:26Z" finished-at="2023-03-01T02:12:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1c98290c]]>
+                <![CDATA[org.testng.TestRunner@5f2606b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.Session@7d9d1a19]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2023-02-28T02:20:19Z" finished-at="2023-02-28T02:20:19Z">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.Session@1794d431]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2023-03-01T02:12:26Z" finished-at="2023-03-01T02:12:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1c98290c]]>
+                <![CDATA[org.testng.TestRunner@5f2606b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="doLogin()[pri:0, instance:testcases.Session@7d9d1a19]" name="doLogin" duration-ms="20317" started-at="2023-02-28T02:20:19Z" finished-at="2023-02-28T02:20:39Z">
+        <test-method status="FAIL" signature="doLogin()[pri:0, instance:testcases.Session@1794d431]" name="doLogin" duration-ms="23371" started-at="2023-03-01T02:12:26Z" finished-at="2023-03-01T02:12:50Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Test is Incorrect]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Test is Incorrect
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at keywords.GenericKeywords.assertAll(GenericKeywords.java:142)
+at testcases.Session.doLogin(Session.java:23)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:testcases.Session@7d9d1a19]" name="quit" is-config="true" duration-ms="1220" started-at="2023-02-28T02:20:39Z" finished-at="2023-02-28T02:20:41Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:testcases.Session@1794d431]" name="quit" is-config="true" duration-ms="950" started-at="2023-03-01T02:12:50Z" finished-at="2023-03-01T02:12:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -24,6 +26,7 @@ public class GenericKeywords
 	public Properties mainProp;
 	public Properties childProp;
 	public ExtentTest test;
+	public SoftAssert softAssert;
 	
 	public void openBrowser(String browserName)
 	{
@@ -121,6 +124,22 @@ public class GenericKeywords
 	public void log(String msg)
 	{
 		test.log(Status.INFO, msg);
+	}
+	
+	//Reporting Failure
+	public void reportFailure(String failureMsg,boolean stopOnFailure)
+	{
+		softAssert.fail(failureMsg);
+		test.log(Status.FAIL, failureMsg);
+		
+		if(stopOnFailure)
+			assertAll();
+	}
+	
+	public void assertAll()
+	{
+		Reporter.getCurrentTestResult().getTestContext().setAttribute("criticalFailure", "Y");
+		softAssert.assertAll();
 	}
 
 }

@@ -3,6 +3,8 @@ package keywords;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.testng.asserts.SoftAssert;
+
 public class ApplicationKeywords extends ValidationKeywords
 {
 	public ApplicationKeywords() 
@@ -23,6 +25,8 @@ public class ApplicationKeywords extends ValidationKeywords
 		{
 			e.printStackTrace();
 		}
+		
+		softAssert = new SoftAssert();
 	}
 
 	public void login()

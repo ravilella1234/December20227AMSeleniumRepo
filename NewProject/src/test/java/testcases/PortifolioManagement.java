@@ -8,6 +8,9 @@ public class PortifolioManagement extends BaseTest
   public void createportifolio() 
   {
 	  System.out.println("createportifolio");
+	  //report
+	  app.reportFailure("some non critical failure....", false);
+	  app.assertAll();
   }
   
   @Test
